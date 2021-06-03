@@ -26,6 +26,7 @@ struct ContentView: View {
           .font(.footnote)
           .padding(.leading, 30.0)
           .padding(.trailing, 30.0)
+          .foregroundColor(Color("TextColor"))
         Text(String(game.target))
           .kerning(-1.0)
           .font(.largeTitle)
@@ -33,9 +34,11 @@ struct ContentView: View {
         HStack {
           Text("1")
             .bold()
+            .foregroundColor(Color("TextColor"))
           Slider(value: $sliderValue, in: 1.0...100.0)
           Text("100")
             .bold()
+            .foregroundColor(Color("TextColor"))
         }
         .padding()
         Button(action: {
@@ -45,6 +48,7 @@ struct ContentView: View {
           Text("Hit me".uppercased())
             .bold()
             .font(.title3)
+            
         }
           .padding(20.0)
           .background(
